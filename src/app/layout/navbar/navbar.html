@@ -1,0 +1,67 @@
+<nav class="navbar">
+
+    <div class="logo">
+        <span>AP</span>
+
+        <div class="name">
+            <strong>Andrés Ponce</strong>
+            <small>Data Analyst | AI</small>
+        </div>
+    </div>
+
+
+    <ul class="nav-links" [class.active]="menuOpen">
+
+        <li>
+            <a href="#home">Inicio</a>
+        </li>
+
+        <li>
+            <a href="#about">Sobre mí</a>
+        </li>
+
+        <li>
+            <a href="#projects">Proyectos</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#experience">Experiencia</a>
+        </li>
+
+        <li>
+            <a href="#certificates">Certificados</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contacto</a>
+        </li>
+
+    </ul>
+
+
+    <div class="actions">
+
+        <button class="theme">
+            🌙
+        </button>
+
+
+        <button class="cv">
+            Descargar CV
+        </button>
+
+    </div>
+
+
+    <button class="hamburger" (click)="toggleMenu()">
+
+        ☰
+
+    </button>
+
+
+</nav>
