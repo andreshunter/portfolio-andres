@@ -6,4 +6,16 @@ import { Component } from '@angular/core';
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
-export class ProjectsComponent {}
+export class ProjectsComponent {
+
+  projects = [
+  {
+    title: 'Asistente Inteligente',
+    image: 'images/project1.jpg',
+    description: '...',
+    technologies: ['Python', 'Django', 'OpenAI'],
+    github: 'https://...',
+    demo: 'https://...'
+  }
+];
+}

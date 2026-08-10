@@ -1,0 +1,42 @@
+<section class="services">
+    <div class="container">
+        <div class="title">
+            <span>
+                Servicios
+            </span>
+            <h2>
+                ¿Qué puedo aportar?
+            </h2>
+            <p>
+                Soluciones enfocadas en datos, inteligencia artificial
+                y desarrollo tecnológico.
+            </p>
+        </div>
+
+        <div class="services-grid">
+            @for(service of services; track service.title){
+            <article class="service-card">
+                <div class="icon">
+                    <i [class]="service.icon"></i>
+                </div>
+
+                <h3>
+                    {{service.title}}
+                </h3>
+
+                <p>
+                    {{service.description}}
+                </p>
+
+                <div class="tags">
+                    @for(tag of service.technologies; track tag){
+                    <span>
+                        {{tag}}
+                    </span>
+                    }
+                </div>
+            </article>
+            }
+        </div>
+    </div>
+</section>

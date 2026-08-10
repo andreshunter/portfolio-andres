@@ -9,6 +9,7 @@ import { ExperienceComponent } from '../../sections/experience/experience';
 import { CertificatesComponent } from '../../sections/certificates/certificates';
 import { ContactComponent } from '../../sections/contact/contact';
 import { FooterComponent } from '../../layout/footer/footer';
+import { ServicesComponent } from '../../sections/services/services';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,8 @@ import { FooterComponent } from '../../layout/footer/footer';
     ExperienceComponent,
     CertificatesComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ServicesComponent
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss'

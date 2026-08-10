@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TECHNOLOGIES } from '../../core/data/technologies';
 
 @Component({
   selector: 'app-skills',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './skills.html',
   styleUrl: './skills.scss',
 })
-export class SkillsComponent {}
+export class SkillsComponent {
+
+  technologies = TECHNOLOGIES;
+  
+}

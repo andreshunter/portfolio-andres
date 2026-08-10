@@ -1,1 +1,38 @@
-<p>certificates works!</p>
+<section class="certificates">
+
+    <div class="container">
+        <div class="title">
+            <span>Certificados</span>
+            <h2>Formación y Certificaciones</h2>
+            <p>
+                Cursos y certificaciones que respaldan mi formación profesional.
+            </p>
+        </div>
+
+        <div class="certificate-grid">
+            @for (certificate of certificates; track certificate.title) {
+                <article class="certificate-card">
+                    <img
+                        [src]="certificate.image"
+                        [alt]="certificate.title">
+                    <div class="content">
+                        <span class="year">
+                            {{certificate.year}}
+                        </span>
+                        <h3>
+                            {{certificate.title}}
+                        </h3>
+                        <p>
+                            {{certificate.institution}}
+                        </p>
+                        <a
+                            [href]="certificate.pdf"
+                            target="_blank">
+                            Ver certificado
+                        </a>
+                    </div>
+                </article>
+            }
+        </div>
+    </div>
+</section>

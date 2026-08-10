@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from '../../core/services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,10 +9,16 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
-   menuOpen = false;
+  menuOpen = false;
+
+
+  constructor(
+    public themeService: ThemeService
+  ){}
 
   toggleMenu(){
-    this.menuOpen = !this.menuOpen;
-  }
 
+    this.menuOpen = !this.menuOpen;
+
+  }
 }

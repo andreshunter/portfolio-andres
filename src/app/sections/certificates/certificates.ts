@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CERTIFICATES } from '../../core/data/certificates';
 
 @Component({
   selector: 'app-certificates',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './certificates.html',
   styleUrl: './certificates.scss',
 })
-export class CertificatesComponent {}
+export class CertificatesComponent {
+  certificates = CERTIFICATES;
+}

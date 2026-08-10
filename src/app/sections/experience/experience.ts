@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EXPERIENCES } from '../../core/data/experiences';
 
 @Component({
   selector: 'app-experience',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './experience.html',
   styleUrl: './experience.scss',
 })
-export class ExperienceComponent {}
+export class ExperienceComponent {
+  experiences = EXPERIENCES;
+}

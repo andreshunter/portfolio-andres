@@ -1,1 +1,23 @@
-<p>skills works!</p>
+<section class="skills">
+
+    <div class="container">
+
+        <div class="title">
+            <span>Tecnologías</span>
+            <h2>Herramientas con las que trabajo</h2>
+        </div>
+
+        <div class="skills-grid">
+            @for (tech of technologies; track tech.name) {
+                <div class="skill-card">
+                    <img
+                        [src]="tech.image"
+                        [alt]="tech.name">
+
+                    <h3>{{ tech.name }}</h3>
+                </div>
+            }
+        </div>
+    </div>
+
+</section>
