@@ -1,0 +1,60 @@
+:host {
+    display: block
+}
+
+.skills {
+    height: 100%;
+    padding: 24px
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px
+}
+
+.panel-heading h2 {
+    font-size: 1.05rem;
+    margin: 0
+}
+
+.panel-heading span {
+    color: var(--secondary)
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px
+}
+
+.skill-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px
+}
+
+.skill-card img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain
+}
+
+.skill-card span {
+    font-size: .62rem;
+    color: #d7deed;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%
+}
+
+@media(max-width:900px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}

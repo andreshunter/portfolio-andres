@@ -1,1 +1,22 @@
-<p>experience works!</p>
+<section id="experience" class="experience panel-card">
+  <div class="panel-heading"><span><i class="bi bi-briefcase"></i></span>
+    <h2>Experiencia</h2>
+  </div>
+  <div class="timeline">
+    @for (item of experiences; track item.title) {
+    <article class="timeline-item">
+      <span class="year">{{ item.year }}</span>
+      <div class="dot"></div>
+      <div class="timeline-content">
+        <h3>{{ item.title }}</h3>
+        <h4>{{ item.company }}</h4>
+        @for (desc of item.description; track $index) {
+        
+        <p>{{ desc }}</p>
+        
+        }
+      </div>
+    </article>
+    }
+  </div>
+</section>

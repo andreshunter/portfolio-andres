@@ -2,7 +2,6 @@
 
     <div class="logo">
         <span>AP</span>
-
         <div class="name">
             <strong>Andrés Ponce</strong>
             <small>Data Analyst | AI</small>
@@ -11,57 +10,30 @@
 
 
     <ul class="nav-links" [class.active]="menuOpen">
-
-        <li>
-            <a href="#home">Inicio</a>
-        </li>
-
-        <li>
-            <a href="#about">Sobre mí</a>
-        </li>
-
-        <li>
-            <a href="#projects">Proyectos</a>
-        </li>
-
-        <li>
-            <a href="#skills">Skills</a>
-        </li>
-
-        <li>
-            <a href="#experience">Experiencia</a>
-        </li>
-
-        <li>
-            <a href="#certificates">Certificados</a>
-        </li>
-
-        <li>
-            <a href="#contact">Contacto</a>
-        </li>
-
+        <li><a href="#home" (click)="closeMenu()">Inicio</a></li>
+        <li><a href="#projects" (click)="closeMenu()">Proyectos</a></li>
+        <li><a href="#about" (click)="closeMenu()">Sobre mí</a></li>
+        <li><a href="#skills" (click)="closeMenu()">Habilidades</a></li>
+        <li><a href="#blog" (click)="closeMenu()">Blog</a></li>
+        <li><a href="#contact" (click)="openContact()">Contacto</a></li>
     </ul>
 
-
     <div class="actions">
-
-        <button class="theme">
-            🌙
+        <button class="theme-btn" (click)="themeService.toggleTheme()">
+            @if(themeService.isDark()){
+            <i class="bi bi-sun"></i>
+            }
+            @else{
+            <i class="bi bi-moon"></i>
+            }
         </button>
-
-
-        <button class="cv">
+        <a class="cv" href="assets/cv.pdf" download>
             Descargar CV
-        </button>
-
+        </a>
     </div>
 
-
     <button class="hamburger" (click)="toggleMenu()">
-
         ☰
-
     </button>
-
 
 </nav>

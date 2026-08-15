@@ -1,0 +1,60 @@
+:host {
+    display: block
+}
+
+.about-panel {
+    padding: 24px
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px
+}
+
+.panel-heading h2 {
+    font-size: 22px;
+    margin: 0
+}
+
+.heading-icon {
+    color: var(--secondary)
+}
+
+.intro {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.7
+}
+
+.qualities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 20px
+}
+
+.qualities div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #dbe2f0;
+    font-size: 13px;
+}
+
+.qualities i {
+    color: #9b7cff;
+    font-size: .9rem
+}
+
+@media(max-width:700px) {
+    .about-panel {
+        padding: 18px
+    }
+
+    .qualities {
+        gap: 11px
+    }
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
 })
-export class FooterComponent {}
+export class FooterComponent {
+  @Output() contactRequested = new EventEmitter<void>();
+
+  currentYear = new Date().getFullYear();
+
+  openContact() {
+    this.contactRequested.emit();
+  }
+}
