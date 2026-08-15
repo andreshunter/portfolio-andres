@@ -1,0 +1,67 @@
+<div class="modal-backdrop" role="presentation" (click)="onBackdropClick($event)">
+  <section class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+    <button class="close-button" type="button" aria-label="Cerrar contacto" (click)="close()">
+      <i class="bi bi-x-lg"></i>
+    </button>
+
+    <div class="modal-intro">
+      <span class="eyebrow"><i class="bi bi-chat-dots"></i> Contacto</span>
+      <h2 id="contact-modal-title">¿Hablamos?</h2>
+      <p>Si tienes una oportunidad laboral o un proyecto, cuéntame un poco y conversemos.</p>
+
+      <div class="contact-list">
+        @for (contact of contacts; track contact.title) {
+          @if (contact.link) {
+            <a class="contact-item" [href]="contact.link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon"><i [class]="contact.icon"></i></span>
+              <span>
+                <strong>{{ contact.title }}</strong>
+                <small>{{ contact.value }}</small>
+              </span>
+              <i class="bi bi-arrow-up-right arrow"></i>
+            </a>
+          } @else {
+            <div class="contact-item">
+              <span class="contact-icon"><i [class]="contact.icon"></i></span>
+              <span>
+                <strong>{{ contact.title }}</strong>
+                <small>{{ contact.value }}</small>
+              </span>
+            </div>
+          }
+        }
+      </div>
+    </div>
+
+    <form class="modal-form" action="mailto:aponce.mery@gmail.com" method="post" enctype="text/plain">
+      <div class="form-heading">
+        <span>Mensaje directo</span>
+        <small>Te responderé lo antes posible.</small>
+      </div>
+
+      <label>
+        <span>Nombre</span>
+        <input name="nombre" type="text" placeholder="Tu nombre" required>
+      </label>
+
+      <label>
+        <span>Correo electrónico</span>
+        <input name="correo" type="email" placeholder="tu@email.com" required>
+      </label>
+
+      <label>
+        <span>Asunto</span>
+        <input name="asunto" type="text" placeholder="¿En qué podemos trabajar?" required>
+      </label>
+
+      <label>
+        <span>Mensaje</span>
+        <textarea name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+      </label>
+
+      <button class="submit-button" type="submit">
+        Enviar mensaje <i class="bi bi-arrow-up-right"></i>
+      </button>
+    </form>
+  </section>
+</div>

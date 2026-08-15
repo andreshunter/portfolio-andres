@@ -1,0 +1,166 @@
+:host{display:block}
+
+.portfolio-shell{
+  width:min(1480px,calc(100% - 48px));
+  margin:0 auto;
+  padding-top:92px;
+}
+
+.dashboard-top{
+  display:grid;
+  grid-template-columns:minmax(0,2.05fr) minmax(330px,.95fr);
+  gap:24px;
+  align-items:stretch;
+}
+
+.hero-slot,
+.sidebar-top>*,
+.dashboard-middle>*{
+  min-width:0;
+}
+
+.sidebar-top{
+  display:grid;
+  grid-template-rows:auto auto;
+  gap:14px;
+}
+
+.panel-card{
+  background:linear-gradient(145deg,rgba(13,18,35,.92),rgba(7,12,25,.88));
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:0 16px 45px rgba(0,0,0,.18);
+}
+
+/*
+  Zona inferior:
+  - izquierda: testimonio + habilidades
+  - derecha: experiencia
+  La experiencia se desplaza solo un poco hacia la derecha,
+  pero su borde derecho queda alineado con el mismo límite
+  imaginario de Sobre mí / Servicios / Proyectos / Certificados.
+*/
+.dashboard-middle{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);
+  gap:14px;
+  align-items:stretch;
+  margin-top:14px;
+}
+
+.left-middle-column{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  min-width:0;
+}
+
+.left-middle-column app-testimonial,
+.left-middle-column app-skills{
+  display:block;
+  min-width:0;
+}
+
+.experience-slot{
+  min-width:0;
+  min-height:100%;
+  /*
+    Antes se agregaban 90px al ancho además del desplazamiento.
+    Eso hacía que el panel terminara fuera de la línea derecha
+    del resto del portafolio.
+  */
+  margin-left:28px;
+  width:calc(100% - 28px);
+}
+
+.experience-slot app-experience{
+  display:block;
+  height:100%;
+}
+
+.full-section{width:100%}
+
+app-projects,
+app-services,
+app-certificates,
+app-contact{
+  display:block;
+}
+
+.full-section ::ng-deep section{
+  padding-top:70px;
+  padding-bottom:70px;
+}
+
+.sidebar-top app-services{
+  display:block;
+  min-height:0;
+}
+
+/* La experiencia conserva toda la altura de testimonio + habilidades */
+.experience-slot ::ng-deep .experience{
+  height:100%;
+  min-height:100%;
+}
+
+/* Asegura que habilidades quede debajo del testimonio */
+.left-middle-column app-skills{
+  flex:1;
+}
+
+/* Tablet */
+@media(max-width:1180px){
+  .portfolio-shell{
+    width:min(1100px,calc(100% - 32px));
+  }
+
+  .dashboard-top{
+    grid-template-columns:1fr;
+  }
+
+  .sidebar-top{
+    grid-template-columns:1.1fr 1fr;
+    grid-template-rows:auto;
+  }
+
+  .dashboard-middle{
+    grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);
+  }
+
+  .experience-slot{
+    margin-left:18px;
+    width:calc(100% - 18px);
+  }
+}
+
+/* Tablet pequeña */
+@media(max-width:850px){
+  .portfolio-shell{
+    width:min(720px,calc(100% - 28px));
+    padding-top:82px;
+  }
+
+  .dashboard-middle{
+    grid-template-columns:1fr;
+  }
+
+  .left-middle-column{
+    gap:14px;
+  }
+
+  .experience-slot{
+    margin-left:0;
+    width:100%;
+  }
+
+  .sidebar-top{
+    grid-template-columns:1fr;
+  }
+}
+
+/* Móvil */
+@media(max-width:600px){
+  .portfolio-shell{
+    width:calc(100% - 20px);
+  }
+}

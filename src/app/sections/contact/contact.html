@@ -1,1 +1,47 @@
-<p>contact works!</p>
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="title">
+            <span>Contacto</span>
+            <h2>¿Hablamos?</h2>
+            <p>
+                Si tienes una oportunidad laboral o un proyecto,
+                estaré encantado de conversar.
+            </p>
+        </div>
+        <div class="contact-grid">
+            <!-- Información -->
+            <div class="info">
+                @for(contact of contacts; track contact.title){
+                    <a
+                        [href]="contact.link"
+                        class="item"
+                        target="_blank" rel="noopener noreferrer">
+                        <i [class]="contact.icon"></i>
+                        <div>
+                            <h3>{{contact.title}}</h3>
+                            <span>{{contact.value}}</span>
+                        </div>
+                    </a>
+                }
+            </div>
+            <!-- Formulario -->
+            <form class="form" action="mailto:aponce.mery@gmail.com" method="post" enctype="text/plain">
+                <input
+                    type="text"
+                    placeholder="Nombre">
+                <input
+                    type="email"
+                    placeholder="Correo electrónico">
+                <input
+                    type="text"
+                    placeholder="Asunto">
+                <textarea
+                    rows="6"
+                    placeholder="Mensaje"></textarea>
+                <button>
+                    Enviar mensaje
+                </button>
+            </form>
+        </div>
+    </div>
+</section>

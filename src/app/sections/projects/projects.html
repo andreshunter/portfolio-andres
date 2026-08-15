@@ -1,1 +1,73 @@
-<p>projects works!</p>
+<section id="projects" class="projects">
+  <div class="projects-header">
+    <div>
+      <span>Portafolio</span>
+      <h2>Proyectos Destacados</h2>
+    </div>
+
+    <div class="projects-actions">
+      <button type="button" aria-label="Proyecto anterior" (click)="previous()">
+        <i class="bi bi-arrow-left"></i>
+      </button>
+      <button type="button" aria-label="Siguiente proyecto" (click)="next()">
+        <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="carousel">
+    <div class="carousel-viewport">
+      <div class="projects-track" [style.--slide]="currentSlide">
+        @for (project of projects; track trackProject($index)) {
+          <article class="project-card">
+            <div class="project-visual" [class]="project.visual">
+              <span>{{ project.category }}</span>
+
+              @if (project.visual === 'visual-ai') {
+                <div class="visual-window">
+                  <i class="bi bi-robot"></i>
+                  <b>Asistente IA</b>
+                  <small>Insights automáticos</small>
+                </div>
+              }
+
+              @if (project.visual === 'visual-ml') {
+                <div class="chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              }
+
+              @if (project.visual === 'visual-nlp') {
+                <div class="word-cloud">excelente<br><b>datos</b><br>atención · servicio · calidad</div>
+              }
+
+              @if (project.visual === 'visual-cv') {
+                <div class="scan"><div></div><div></div></div>
+              }
+            </div>
+
+            <div class="content">
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.description }}</p>
+
+              <div class="tech">
+                @for (tech of project.technologies; track tech) {
+                  <span>{{ tech }}</span>
+                }
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+
+    <div class="carousel-status" aria-label="Posición del carrusel">
+      @for (i of slidePositions; track i) {
+        <button
+          type="button"
+          [class.active]="currentSlide === i"
+          [attr.aria-label]="'Ir a la posición ' + (i + 1)"
+          (click)="goToSlide(i)">
+        </button>
+      }
+    </div>
+  </div>
+</section>

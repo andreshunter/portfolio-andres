@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { PROFILE } from '../../core/data/profile';
 
 @Component({
   selector: 'app-hero',
@@ -6,4 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
-export class HeroComponent {}
+export class HeroComponent {
+  @Output() contactRequested = new EventEmitter<void>();
+
+  profile = PROFILE;
+
+  openContact() {
+    this.contactRequested.emit();
+  }
+}

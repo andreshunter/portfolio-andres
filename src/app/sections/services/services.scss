@@ -1,0 +1,171 @@
+:host {
+    display: block
+}
+
+.services {
+    padding: 0
+}
+
+.container {
+    width: 100%;
+    margin: auto
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 28px
+}
+
+.title span {
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.title h2 {
+    font-size: 22px;
+    margin: 8px 0
+}
+
+.title p {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin: 0
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px
+}
+
+.service-card {
+    padding: 16px;
+    border-radius: 14px;
+    background: linear-gradient(145deg, rgba(13, 18, 35, .9), rgba(7, 12, 25, .84));
+    border: 1px solid var(--border);
+    transition: var(--transition)
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 92, 255, .6);
+    box-shadow: 0 14px 32px rgba(64, 53, 180, .14)
+}
+
+.icon {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    margin-bottom: 10px
+}
+
+.icon i {
+    font-size: 15px;
+    color: white
+}
+
+.service-card h3 {
+    font-size: 14px;
+    margin: 0 0 6px
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    line-height: 1.45;
+    font-size: 12px;
+    margin: 0
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 9px
+}
+
+.tags span {
+    padding: 4px 6px;
+    border-radius: 5px;
+    background: #111a32;
+    color: #aebaff;
+    font-size: 10px;
+}
+
+.services.compact {
+    padding-top: 8px
+}
+
+.services.compact .container {
+    width: 100%
+}
+
+.services.compact .title {
+    text-align: left;
+    margin-bottom: 14px
+}
+
+.services.compact .title h2 {
+    font-size: 17px;
+    margin: 5px 0 0
+}
+
+.services.compact .services-grid {
+    grid-template-columns: 1fr;
+    gap: 8px
+}
+
+.services.compact .service-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 11px 12px;
+    border-radius: 12px
+}
+
+.services.compact .icon {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    margin: 0
+}
+
+.services.compact .icon i {
+    font-size: 13px
+}
+
+.services.compact .service-copy {
+    min-width: 0
+}
+
+.services.compact .service-card h3 {
+    font-size: 15px;
+    margin-bottom: 3px
+}
+
+.services.compact .service-card p {
+    font-size: 13px;
+    line-height: 1.35
+}
+
+.services.compact .tags {
+    margin-top: 6px
+}
+
+.services.compact .tags span {
+    font-size: 13px;
+    padding: 3px 5px
+}
+
+@media(max-width:700px) {
+    .services-grid {
+        grid-template-columns: 1fr
+    }
+
+    .services.compact .services-grid {
+        grid-template-columns: 1fr
+    }
+}

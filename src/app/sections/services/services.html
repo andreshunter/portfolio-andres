@@ -1,0 +1,30 @@
+<section id="services" class="services" [class.compact]="compact">
+  <div class="container">
+    <div class="title">
+      <span>Servicios</span>
+      <h2>¿Qué puedo aportar?</h2>
+      @if (!compact) {
+        <p>Soluciones enfocadas en datos, inteligencia artificial y desarrollo tecnológico.</p>
+      }
+    </div>
+
+    <div class="services-grid">
+      @for (service of services; track service.title) {
+        <article class="service-card">
+          <div class="icon">
+            <i [class]="service.icon" style="font-size: 20px;"></i>
+          </div>
+          <div class="service-copy">
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+            <div class="tags">
+              @for (tag of service.technologies; track tag) {
+                <span>{{ tag }}</span>
+              }
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
