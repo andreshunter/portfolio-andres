@@ -1,23 +1,8 @@
-<section class="skills">
-
-    <div class="container">
-
-        <div class="title">
-            <span>Tecnologías</span>
-            <h2>Herramientas con las que trabajo</h2>
-        </div>
-
-        <div class="skills-grid">
-            @for (tech of technologies; track tech.name) {
-                <div class="skill-card">
-                    <img
-                        [src]="tech.image"
-                        [alt]="tech.name">
-
-                    <h3>{{ tech.name }}</h3>
-                </div>
-            }
-        </div>
-    </div>
-
+<section id="skills" class="skills panel-card">
+  <div class="panel-heading"><span><i class="bi bi-code-slash" style="font-size: 25px;"></i></span><h2>Habilidades Técnicas</h2></div>
+  <div class="skills-grid">
+    @for (tech of technologies; track tech.name) {
+      <div class="skill-card"><img [src]="tech.image" [alt]="tech.name"><span>{{ tech.name }}</span></div>
+    }
+  </div>
 </section>

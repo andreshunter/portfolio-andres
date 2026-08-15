@@ -1,73 +1,73 @@
-<section class="projects">
-
-    <div class="container">
-        <div class="title">
-            <span>Portafolio</span>
-            <h2>Proyectos Destacados</h2>
-            <p>
-                Algunos proyectos desarrollados en análisis de datos,
-                inteligencia artificial y desarrollo web.
-            </p>
-        </div>
-        <div class="projects-grid">
-            <!-- Proyecto 1 -->
-            <article class="project-card">
-                <img src="images/project1.jpg" alt="Proyecto IA">
-                <div class="content">
-                    <h3>Asistente Inteligente</h3>
-                    <p>
-                        Chatbot entrenado con documentos utilizando
-                        LangChain y OpenAI.
-                    </p>
-                    <div class="tech">
-                        <span>Python</span>
-                        <span>Django</span>
-                        <span>OpenAI</span>
-                    </div>
-                    <div class="buttons">
-                        <a href="#">GitHub</a>
-                        <a href="#">Demo</a>
-                    </div>
-                </div>
-            </article>
-            <!-- Proyecto 2 -->
-            <article class="project-card">
-                <img src="images/project2.jpg" alt="Dashboard">
-                <div class="content">
-                    <h3>Dashboard Comercial</h3>
-                    <p>
-                        Dashboard interactivo para seguimiento de KPIs y ventas.
-                    </p>
-                    <div class="tech">
-                        <span>Power BI</span>
-                        <span>SQL</span>
-                        <span>Python</span>
-                    </div>
-                    <div class="buttons">
-                        <a href="#">GitHub</a>
-                        <a href="#">Demo</a>
-                    </div>
-                </div>
-            </article>
-            <!-- Proyecto 3 -->
-            <article class="project-card">
-                <img src="images/project3.jpg" alt="ML">
-                <div class="content">
-                    <h3>Detección de Anomalías</h3>
-                    <p>
-                        Modelo de Machine Learning para clasificación de imágenes.
-                    </p>
-                    <div class="tech">
-                        <span>TensorFlow</span>
-                        <span>Python</span>
-                        <span>OpenCV</span>
-                    </div>
-                    <div class="buttons">
-                        <a href="#">GitHub</a>
-                        <a href="#">Demo</a>
-                    </div>
-                </div>
-            </article>
-        </div>
+<section id="projects" class="projects">
+  <div class="projects-header">
+    <div>
+      <span>Portafolio</span>
+      <h2>Proyectos Destacados</h2>
     </div>
+
+    <div class="projects-actions">
+      <button type="button" aria-label="Proyecto anterior" (click)="previous()">
+        <i class="bi bi-arrow-left"></i>
+      </button>
+      <button type="button" aria-label="Siguiente proyecto" (click)="next()">
+        <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="carousel">
+    <div class="carousel-viewport">
+      <div class="projects-track" [style.--slide]="currentSlide">
+        @for (project of projects; track trackProject($index)) {
+          <article class="project-card">
+            <div class="project-visual" [class]="project.visual">
+              <span>{{ project.category }}</span>
+
+              @if (project.visual === 'visual-ai') {
+                <div class="visual-window">
+                  <i class="bi bi-robot"></i>
+                  <b>Asistente IA</b>
+                  <small>Insights automáticos</small>
+                </div>
+              }
+
+              @if (project.visual === 'visual-ml') {
+                <div class="chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              }
+
+              @if (project.visual === 'visual-nlp') {
+                <div class="word-cloud">excelente<br><b>datos</b><br>atención · servicio · calidad</div>
+              }
+
+              @if (project.visual === 'visual-cv') {
+                <div class="scan"><div></div><div></div></div>
+              }
+            </div>
+
+            <div class="content">
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.description }}</p>
+
+              <div class="tech">
+                @for (tech of project.technologies; track tech) {
+                  <span>{{ tech }}</span>
+                }
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+
+    <div class="carousel-status" aria-label="Posición del carrusel">
+      @for (i of slidePositions; track i) {
+        <button
+          type="button"
+          [class.active]="currentSlide === i"
+          [attr.aria-label]="'Ir a la posición ' + (i + 1)"
+          (click)="goToSlide(i)">
+        </button>
+      }
+    </div>
+  </div>
 </section>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SERVICES } from '../../core/data/services';
 
 @Component({
@@ -7,6 +7,7 @@ import { SERVICES } from '../../core/data/services';
   templateUrl: './services.html',
   styleUrl: './services.scss',
 })
-export class ServicesComponent{
-   services = SERVICES;
+export class ServicesComponent {
+  @Input() compact = false;
+  services = SERVICES;
 }

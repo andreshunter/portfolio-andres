@@ -1,0 +1,25 @@
+<section id="impact" class="impact-panel panel-card">
+  <div class="panel-heading">
+    <span class="heading-icon"><i class="bi bi-activity"></i></span>
+    <div>
+      <span class="eyebrow">Resultados</span>
+      <h2>Impacto de mi trabajo</h2>
+    </div>
+  </div>
+
+  <div class="impact-grid">
+    @for (stat of stats; track stat.label) {
+      <article class="impact-stat">
+        <span class="stat-icon"><i [class]="'bi ' + stat.icon"></i></span>
+        <div>
+          <strong>{{ stat.value }}</strong>
+          <span>{{ stat.label }}</span>
+        </div>
+      </article>
+    }
+  </div>
+
+  <p class="impact-note">
+    La idea es convertir estas tarjetas en métricas verificables cuando tengas más cifras concretas de tus proyectos.
+  </p>
+</section>

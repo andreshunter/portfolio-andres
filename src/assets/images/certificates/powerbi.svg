@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+  <rect width="800" height="500" rx="36" fill="#0f172a"/>
+  <circle cx="650" cy="90" r="170" fill="#6366f1" opacity=".18"/>
+  <circle cx="160" cy="420" r="210" fill="#a855f7" opacity=".12"/>
+  <rect x="55" y="55" width="690" height="390" rx="28" fill="none" stroke="url(#g)" stroke-width="3" opacity=".65"/>
+  <text x="80" y="220" fill="#f8fafc" font-family="Arial,sans-serif" font-size="46" font-weight="700">Power BI</text>
+  <text x="80" y="270" fill="#94a3b8" font-family="Arial,sans-serif" font-size="24">Formación profesional</text>
+  <rect x="80" y="325" width="150" height="8" rx="4" fill="#6366f1"/>
+  <rect x="245" y="325" width="105" height="8" rx="4" fill="#a855f7" opacity=".75"/>
+</svg>

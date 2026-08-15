@@ -1,4 +1,4 @@
-<section class="contact">
+<section id="contact" class="contact">
     <div class="container">
         <div class="title">
             <span>Contacto</span>
@@ -15,7 +15,7 @@
                     <a
                         [href]="contact.link"
                         class="item"
-                        target="_blank">
+                        target="_blank" rel="noopener noreferrer">
                         <i [class]="contact.icon"></i>
                         <div>
                             <h3>{{contact.title}}</h3>
@@ -25,7 +25,7 @@
                 }
             </div>
             <!-- Formulario -->
-            <form class="form">
+            <form class="form" action="mailto:aponce.mery@gmail.com" method="post" enctype="text/plain">
                 <input
                     type="text"
                     placeholder="Nombre">

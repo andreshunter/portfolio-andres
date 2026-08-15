@@ -1,51 +1,75 @@
 export const TECHNOLOGIES = [
     {
         name:'Python',
-        image:'images/skills/python.svg'
+        image:'assets/images/skills/python.png'
     },
     {
         name:'Django',
-        image:'images/skills/django.svg'
+        image:'assets/images/skills/django.png'
     },
     {
         name:'C#',
-        image:'images/skills/csharp.svg'
+        image:'assets/images/skills/c-sharp.png'
+    },
+    {
+        name:'.NET',
+        image:'assets/images/skills/net.png'
+    },
+    {
+        name:'TypeScript',
+        image:'assets/images/skills/typescript.png'
+    },
+    {
+        name:'Visual Basic',
+        image:'assets/images/skills/VB.png'
     },
     {
         name:'Angular',
-        image:'images/skills/angular.svg'
+        image:'assets/images/skills/angular.png'
+    },
+    {
+        name:'React',
+        image:'assets/images/skills/react.png'
     },
     {
         name:'AWS',
-        image:'images/skills/aws.svg'
+        image:'assets/images/skills/-aws.png'
     },
     {
         name:'SQL Server',
-        image:'images/skills/sqlserver.svg'
+        image:'assets/images/skills/sqlserver.png'
     },
     {
         name:'SQL Oracle',
-        image:'images/skills/sqloracle.svg'
+        image:'assets/images/skills/oracle.png'
     },
     {
         name:'PostgreSQL',
-        image:'images/skills/postgresql.svg'
+        image:'assets/images/skills/postgresql.png'
     },
     {
         name:'Power BI',
-        image:'images/skills/powerbi.svg'
+        image:'assets/images/skills/powerBI.png'
     },
     {
         name:'Git',
-        image:'images/skills/git.svg'
+        image:'assets/images/skills/git.png'
     },
     {
         name:'GitHub',
-        image:'images/skills/github.svg'
+        image:'assets/images/skills/github.png'
     },
     {
-        name:'Azure',
-        image:'images/skills/azure.svg'
+        name:'Azure DevOps',
+        image:'assets/images/skills/azure.png'
+    },
+    {
+        name:'Azure Pipelines',
+        image:'assets/images/skills/azure-pipeline.png'
+    },
+    {
+        name:'Google Cloud Platform',
+        image:'assets/images/skills/gcp.png'
     }
 
 ];

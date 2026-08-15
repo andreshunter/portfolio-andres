@@ -11,20 +11,20 @@ export const CONTACTS: Contact[] = [
     {
         icon: 'bi bi-linkedin',
         title: 'LinkedIn',
-        value: 'linkedin.com/in/andres',
+        value: 'linkedin.com/in/andreponcet',
         link: 'https://linkedin.com/in/andreponcet/'
     },
     {
         icon: 'bi bi-github',
         title: 'GitHub',
-        value: 'github.com/andres',
+        value: 'github.com/andreshunter',
         link: 'https://github.com/andreshunter/'
     },
     {
-        icon: 'bi bi-geo-alt-fill',
-        title: 'Ubicación',
-        value: 'Chile',
-        link: '#'
+        icon: 'bi bi-whatsapp',
+        title: 'WhatsApp',
+        value: 'Escríbeme por WhatsApp',
+        link: 'https://wa.me/+56971378888'
     }
 
 ];

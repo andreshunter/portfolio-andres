@@ -1,97 +1,33 @@
-<section class="hero">
-    <div class="hero-container">
-        <!-- TEXTO -->
-        <div class="hero-content">
-            <span class="hello">
-                Hola 👋, soy
-            </span>
-            <h1>{{ profile.name }}</h1>
-            <h2>{{ profile.profession }}</h2>
-            <p>{{ profile.description }}</p>
-
-            <div class="buttons">
-
-                <a href="#projects" class="primary">
-                    Ver proyectos
-                </a>
-
-                <a href="assets/cv.pdf" download class="secondary">
-                    Descargar CV
-                </a>
-
-            </div>
-
-            <div class="stats">
-
-                <div>
-                    <strong>20+</strong>
-                    <span>Proyectos</span>
-                </div>
-
-                <div>
-                    <strong>5+</strong>
-                    <span>Tecnologías</span>
-                </div>
-
-                <div>
-                    <strong>3+</strong>
-                    <span>Años aprendiendo</span>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- IMAGEN -->
-        <div class="hero-image">
-            <div class="glow"></div>
-            <div class="circle">
-                <img src="app/assets/images/brain-ai-transparent.png" alt="Artificial Intelligence">
-            </div>
-
-            <!-- TARJETAS -->
-            <div class="floating-card card-one">
-                <div class="icon">
-                    📈
-                </div>
-                <div>
-                    <strong>
-                        98%
-                    </strong>
-
-                    <span>
-                        Model Accuracy
-                    </span>
-                </div>
-            </div>
-
-            <div class="floating-card card-two">
-                <div class="icon">
-                    🤖
-                </div>
-                <div>
-                    <strong>
-                        15+
-                    </strong>
-                    <span>
-                        AI Projects
-                    </span>
-                </div>
-            </div>
-            <div class="floating-card card-three">
-                <div class="icon">
-                    🗄️
-                </div>
-                <div>
-                    <strong>
-                        30K+
-                    </strong>
-                    <span>
-                        Data Processed
-                    </span>
-                </div>
-            </div>
-        </div>
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><i class="bi bi-stars"></i> Apasionado por los datos e Inteligencia Artificial</div>
+    <h1>Transformo datos en <span>inteligencia</span> que<br><em>impulsa decisiones</em></h1>
+    <p>Analista de datos con experiencia en análisis avanzado, visualización y desarrollo de soluciones con IA para
+      resolver problemas reales de negocio.</p>
+    <div class="buttons">
+      <a href="#projects" class="primary">Ver proyectos <i class="bi bi-arrow-right"></i></a>
+      <button type="button" class="secondary" (click)="openContact()">Contactarme <i
+          class="bi bi-envelope"></i></button>
     </div>
+  </div>
 
+  <div class="hero-visual" aria-hidden="true">
+    <div class="visual-glow"></div>
+    <div class="network-ring ring-a"></div>
+    <div class="network-ring ring-b"></div>
+    <img class="brain" src="assets/images/brain-ai-transparent.png" alt="">
+    <div class="data-card demand"><small>Predicción de demanda</small><strong>+23.8%</strong><span>vs. mes
+        anterior</span>
+      <div class="mini-line"></div>
+    </div>
+    <div class="data-card sentiment"><small>Análisis de sentimiento</small>
+      <div class="donut"><b>78%</b></div><span>Positivo</span>
+    </div>
+    <div class="data-card code"><small>Modelo
+        predictivo</small><code>model.fit(X_train, y_train)<br>pred = model.predict(X_test)</code></div>
+    <div class="data-card summary"><small>Resumen con IA</small>
+      <p>La tendencia de ventas muestra un crecimiento constante en la mayoría de las regiones...</p>
+    </div>
+    <div class="bar-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
 </section>
